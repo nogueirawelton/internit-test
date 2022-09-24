@@ -1,0 +1,35 @@
+#home {
+  .container {
+    background: url(../../../public/assets/images/img_04.jpg) no-repeat center;
+    background-size: cover;
+    
+    border-radius: 100px 0 600px 0;
+    width: 100%;
+    display: flex;
+
+    div {
+      padding: 0 2rem 2rem;
+      margin-top: auto;
+      text-transform: uppercase;
+
+      h1 {
+        max-width: 600px;
+        font-weight: normal;
+        font-size: 4.5rem;
+        color: var(--white);
+      }
+
+      a {
+        display: inline-flex;
+        gap: 1.2rem;
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: var(--gray-500);
+        background-color: var(--gray-200);
+        padding: .5rem 1rem;
+        border-radius: .5rem;
+        margin-top: 1rem;
+      }
+    }
+  }
+}

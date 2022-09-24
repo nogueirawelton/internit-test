@@ -1,0 +1,87 @@
+#enterprise {
+  .info {
+    max-width: 665px;
+    margin-top: 2rem;
+    overflow: hidden;
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    p {
+      max-width: 320px;
+      padding: 1rem 2rem;
+      line-height: 1.4;
+
+      & + img {
+        transform: rotate(180deg) translateX(-80%);
+      }
+    }
+
+    .slider {
+      margin-top: 3rem;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        height: 250px;
+        margin-right: 1rem;
+        overflow-x: auto;
+        gap: 1.5rem;
+        list-style: none;
+        padding-bottom: 1rem;
+
+        li {
+          flex-shrink: 0;
+
+          img {
+            object-fit: cover;
+            width: 200px;
+            height: 100%;
+            border-radius: 20px 0px 100px;
+          }
+        }
+      }
+
+      div {
+        width: 100%;
+        text-align: center;
+
+        input[type="range"] {
+          display: block;
+          appearance: none;
+          width: 500px;
+          margin-inline: auto;
+          height: 2px;
+          background: var(--gray-300);
+  
+          &::-webkit-slider-thumb {
+            appearance: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            background: var(--yellow-500);
+            cursor: pointer;
+          }
+        }
+        small {
+          display: block;
+          margin-top: 1rem;
+          font-size: 1.5rem;
+          color: var(--gray-600);
+        }
+      }
+    }
+  }
+
+  .image {
+    flex: 1;
+    img {
+      object-fit: cover;
+      height: 100%;
+      border-radius: 600px 0 100px 0;
+    }
+  }
+}
