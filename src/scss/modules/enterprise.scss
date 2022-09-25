@@ -20,27 +20,29 @@
 
     .slider {
       margin-top: 3rem;
+      margin-right: 1rem;
+      
       ::-webkit-scrollbar {
         display: none;
       }
 
-      ul {
+      .slider-track {
         display: flex;
         height: 250px;
-        margin-right: 1rem;
         overflow-x: auto;
         gap: 1.5rem;
         list-style: none;
         padding-bottom: 1rem;
 
-        li {
-          flex-shrink: 0;
+        img {
+          object-fit: cover;
+          width: 200px;
+          height: 100%;
+          border-radius: 20px 0px 100px;
+          cursor: pointer;
 
-          img {
-            object-fit: cover;
-            width: 200px;
-            height: 100%;
-            border-radius: 20px 0px 100px;
+          &.active{
+            display: none;
           }
         }
       }
