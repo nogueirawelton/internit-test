@@ -14,6 +14,7 @@
 
   --back: #000000;
 
+  --yellow-50: #FDEFD8;
   --yellow-500: #FFB41D;
 }
 
@@ -67,6 +68,41 @@ section {
   display: flex;
 }
 
+#modal-overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--yellow-500);
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  div {
+    background: var(--white);
+    border-radius: 0 314px 0 0;
+
+    img {
+      margin-inline: auto;
+      height: 100%;
+    }
+
+    button {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      background: none;
+      border: none;
+    }
+  }
+}
+
+
 @import './modules/aside.scss';
 @import './modules/home.scss';
 @import './modules/enterprise.scss';
+@import './modules/building-documents.scss';

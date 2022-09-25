@@ -4,18 +4,17 @@ export const dynamicHomeBackground = (data) => {
   const homeContainer = document.querySelector("#home .container");
   const homeContainerInfo = homeContainer.querySelector("h1");
 
+  const imagesBackground = data.filter(i => i.richTitle.length > 0);
+
   const setData = (i) => {
-    if(data[i].richTitle.length) {
-      homeContainer.style.background = `url(/assets/images/img_${data[i].id}.jpg) no-repeat center`;
-      homeContainerInfo.innerHTML = data[i].richTitle;
-    }
+      homeContainer.style.background = `url(/assets/images/img_${imagesBackground[i].id}.jpg) no-repeat center`;
+      homeContainerInfo.innerHTML = imagesBackground[i].richTitle;
   }
 
   setData(i);
-
   setInterval(() => { 
     i++;
-    if(i > data.length - 1) {
+    if(i > imagesBackground.length - 1) {
       i = 0;
     }
     setData(i);

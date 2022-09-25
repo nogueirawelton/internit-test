@@ -30,7 +30,25 @@ const data = [
   }
 ]
 
+const toggleModal = () => {
+  const modal = document.querySelector("#modal-overlay");
+  const button = document.querySelector("[data-open-document]");
+  const closeButton = document.querySelector("[data-close-document]");
+
+  button.addEventListener("click", () => {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  })
+
+  closeButton.addEventListener("click", () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  })
+
+}
+
 window.onload = () => {
+  toggleModal();
   dynamicHomeBackground(data);
   createCarrouselItems(data);
 }

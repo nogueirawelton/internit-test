@@ -12,6 +12,14 @@
   </head>
   <body>
     <div id="container">
+      <div id="modal-overlay">
+        <div>
+          <img src="/assets/images/bd_1.jpg" alt="">
+          <button data-close-document>
+            <img src="/assets/icons/x.svg" alt="">
+          </button>
+        </div>
+      </div>
       <aside>
         <div>
           <header>
@@ -41,12 +49,11 @@
         <section id="enterprise">
           <div class="info">
             <h2>O Empreendimento</h2>
-            <img src="/assets/images/diamond_line.svg" alt="">
+            <img src="/assets/icons/diamond_arrow_1.svg" alt="">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra viverra nisl, id nullam et morbi. Ornare ut est faucibus nec ut curabitur sagittis. Dui risus amet, sit morbi aliquet. In consectetur hendrerit ut lobortis nunc enim fusce morbi sagittis. Bibendum nulla cursus urna habitant integer in orci, amet. Elementum habitasse sem amet sit mi est. Aenean dui, odio malesuada ullamcorper est sed. Aliquet lacus, platea nibh ultricies turpis diam leo duis. Amet massa, sit rhoncus leo laoreet habitant. Aliquam nullam risus duis curabitur.</p>
-            <img src="/assets/images/diamond_line.svg" alt="">
+            <img src="/assets/icons/diamond_arrow_1.svg" alt="">
               <div class="slider">
               <div class="slider-track">
-
               </div>
               <div>
                 <input type="range" min="0" value="0" max="100" data-enterprise-scroll>
@@ -59,13 +66,17 @@
           </div>
         </section>
         <section id="building-documents">
-          <div>
-            <img src="/assets/images/plant_1.png" alt="">
+          <div class="image">
+            <img src="/assets/images/bd_1.jpg" alt="">
+            <button data-open-document>
+              <img src="/assets/icons/search.svg" alt="">
+            </button>
           </div>
-          <div>
+          <div class="info">
             <h2>Plantas</h2>
+              <img src="/assets/icons/diamond_arrow_2.svg" alt="">
             <div>
-              <button>3 Quartos</button>
+              <button class="active">3 Quartos</button>
               <button>2 Quartos</button>
               <button>Cobertura</button>
             </div>
