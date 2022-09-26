@@ -38,6 +38,11 @@ aside {
         &:last-child {
           max-width: 120px;
           font-size: 0.875rem;
+
+          &:hover {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+          }
         }
   
         &::after {
