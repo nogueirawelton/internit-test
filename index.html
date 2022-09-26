@@ -11,8 +11,13 @@
     <title>Company</title>
   </head>
   <body>
+    <div data-menu-overlay>
+    </div>
+    <button data-close-menu>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
     <div id="container">
-      <div id="modal-overlay">
+      <div data-modal>
         <div>
           <img class="openned-image" src="/assets/images/bd_1.png" alt="">
           <button data-close-document>
@@ -21,21 +26,24 @@
         </div>
       </div>
       <aside>
-        <div>
+        <div data-menu>
           <header>
             <img src="logo.svg" alt="Company Logo">
           </header>
           <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#enterprise">O Empreendimento</a>
-            <a href="#building-documents">Plantas</a>
-            <a href="">Localização</a>
+            <a href="#home" data-inside-nav class="active">Home</a>
+            <a href="#enterprise" data-inside-nav >O Empreendimento</a>
+            <a href="#building-documents" data-inside-nav >Plantas</a>
+            <a href="" data-inside-nav >Localização</a>
             <a href="">Políticas de Privacidade</a>
           </nav>
         </div>
       </aside>
       <main>
         <section id="home">
+          <button data-open-menu>
+            <img src="/assets/icons/menu.svg" alt="">
+          </button>
           <div class="container">
             <div>
               <h1>Aposte no <strong>conforto</strong> sem perder a <strong>elegância</strong></h1>

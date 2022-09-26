@@ -69,7 +69,7 @@ section {
   display: flex;
 }
 
-#modal-overlay {
+[data-modal] {
   position: fixed;
   z-index: 100;
   top: 0;
@@ -91,8 +91,9 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 
-    @media(max-width: 500px) {
+    @media(max-width: 1024px) {
       border-radius: 0 214px 0 0;
     }
 
@@ -108,6 +109,50 @@ section {
       right: 2rem;
       background: none;
       border: none;
+    }
+  }
+}
+
+[data-menu-overlay] {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background: rgba($color: #000000, $alpha: .3);
+
+  @media(max-width: 960px) {
+    &.active {
+      display: block;
+    }
+  }
+}
+
+[data-close-menu] {
+  display: none;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  z-index: 3;
+  border: none;
+  background: none;
+
+  @media(max-width: 960px) {
+    &.active {
+      display: block;
+    }
+  }
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+
+    @media(max-width: 500px) {
+      stroke: #000000;
     }
   }
 }

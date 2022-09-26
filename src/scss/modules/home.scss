@@ -1,4 +1,26 @@
 #home {
+  position: relative;
+
+  [data-open-menu] {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1;
+    background: none;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+
+    @media(max-width: 960px) {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+  
   .container {
     background-size: cover;
     border-radius: 100px 0 600px 0;
@@ -74,6 +96,10 @@
 
         @media(max-width: 500px) {
           font-size: 1.5rem;
+
+          img {
+            width: 25px;
+          }
         }
       }
     }

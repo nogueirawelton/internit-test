@@ -1,4 +1,4 @@
-export const dynamicHomeBackground = (data) => {
+export const backgroundController = (data) => {
   let i = 0;
 
   const homeContainer = document.querySelector("#home .container");

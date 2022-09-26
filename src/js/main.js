@@ -1,8 +1,11 @@
 import "../scss/index.scss";
 
-import { dynamicHomeBackground } from "./modules/dynamicHomeBackground";
-import { createCarrouselItems } from "./modules/createCarrouselItems";
-import { toggleModal } from "./modules/toggleModal";
+import { backgroundController } from "./modules/backgroundController";
+import { carouselController } from "./modules/carouselController";
+import { modalController } from "./modules/modalController";
+import { documentsController } from "./modules/documentsController";
+import { activeLinkController } from "./modules/activeLinkController";
+import { mobileMenuController } from "./modules/mobileMenuController";
 
 const data = [
   {
@@ -31,25 +34,11 @@ const data = [
   }
 ]
 
-const documentController = () => {
-  const controls = document.querySelectorAll(".info .document-controls button");
-  const buildingDocument = document.querySelector(".document");
-
-  console.log(buildingDocument);
-  controls.forEach((control, index) => {
-    control.addEventListener("click", (event) => {
-      controls.forEach(control  => {
-        control.classList.remove("active");
-      });
-      event.target.classList.add("active");
-      buildingDocument.setAttribute("src", `/assets/images/bd_${index+1}.png`)
-    })
-  })
-}
-
 window.onload = () => {
-  dynamicHomeBackground(data);
-  createCarrouselItems(data);
-  toggleModal();
-  documentController();
+  activeLinkController();
+  backgroundController(data);
+  carouselController(data);
+  documentsController();
+  modalController();
+  mobileMenuController();
 }

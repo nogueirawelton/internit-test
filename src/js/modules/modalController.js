@@ -1,5 +1,5 @@
-export const toggleModal = () => {
-  const modal = document.querySelector("#modal-overlay");
+export const modalController = () => {
+  const modal = document.querySelector("[data-modal]");
   const button = document.querySelector("[data-open-document]");
   const closeButton = document.querySelector("[data-close-document]");
 

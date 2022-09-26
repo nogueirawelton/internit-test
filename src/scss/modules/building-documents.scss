@@ -10,6 +10,10 @@
     padding-inline: 2rem;
   }
 
+  @media(max-width: 500px) {
+    padding-inline: 1rem;
+  }
+
   .image {
     width: min(1153px, 100%);
     margin-right: 4rem;
