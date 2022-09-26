@@ -24,6 +24,10 @@
     h2 {
       text-transform: uppercase;
       font-size: 2rem;
+
+      @media(max-width: 500px) {
+        font-size: 1.75rem;
+      }
     }
 
     p {

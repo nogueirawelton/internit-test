@@ -21,6 +21,10 @@
     align-items: center;
     justify-content: center;
 
+    @media(max-width: 500px) {
+      min-height: 444px;
+    }
+
     
     @media(max-width: 1450px) {
       border-radius: 100px 0 100px 0;
@@ -70,6 +74,10 @@
     h2 {
       text-transform: uppercase;
       font-size: 2rem;
+
+      @media(max-width: 500px) {
+        font-size: 1.75rem;
+      }
     }
 
     div {
@@ -97,6 +105,10 @@
         border: none;
         border-radius: .5rem;
         background: var(--gray-300);
+
+        @media(max-width: 500px) {
+          font-size: 1.25rem;
+        }
 
         &.active {
           background: var(--yellow-500);
