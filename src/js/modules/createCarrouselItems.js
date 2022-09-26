@@ -11,7 +11,7 @@ export const createCarrouselItems = (data) => {
 
       newImage.setAttribute("src", `/assets/images/img_${id}.jpg`);
       newImage.addEventListener("click", setActiveImage);
-      
+       
       if(!index) {
         newImage.classList.add("active");
       }

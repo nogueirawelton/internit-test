@@ -7,8 +7,8 @@ export const dynamicHomeBackground = (data) => {
   const imagesBackground = data.filter(i => i.richTitle.length > 0);
 
   const setData = (i) => {
-      homeContainer.style.background = `url(/assets/images/img_${imagesBackground[i].id}.jpg) no-repeat center`;
-      homeContainerInfo.innerHTML = imagesBackground[i].richTitle;
+    homeContainer.style.background = `url(/assets/images/img_${imagesBackground[i].id}.jpg) no-repeat center`;
+    homeContainerInfo.innerHTML = imagesBackground[i].richTitle;
   }
 
   setData(i);

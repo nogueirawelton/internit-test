@@ -2,6 +2,7 @@ import "../scss/index.scss";
 
 import { dynamicHomeBackground } from "./modules/dynamicHomeBackground";
 import { createCarrouselItems } from "./modules/createCarrouselItems";
+import { toggleModal } from "./modules/toggleModal";
 
 const data = [
   {
@@ -30,25 +31,25 @@ const data = [
   }
 ]
 
-const toggleModal = () => {
-  const modal = document.querySelector("#modal-overlay");
-  const button = document.querySelector("[data-open-document]");
-  const closeButton = document.querySelector("[data-close-document]");
+const documentController = () => {
+  const controls = document.querySelectorAll(".info .document-controls button");
+  const buildingDocument = document.querySelector(".document");
 
-  button.addEventListener("click", () => {
-    modal.classList.add("active");
-    document.body.style.overflow = "hidden";
+  console.log(buildingDocument);
+  controls.forEach((control, index) => {
+    control.addEventListener("click", (event) => {
+      controls.forEach(control  => {
+        control.classList.remove("active");
+      });
+      event.target.classList.add("active");
+      buildingDocument.setAttribute("src", `/assets/images/bd_${index+1}.png`)
+    })
   })
-
-  closeButton.addEventListener("click", () => {
-    modal.classList.remove("active");
-    document.body.style.overflow = "auto";
-  })
-
 }
 
 window.onload = () => {
-  toggleModal();
   dynamicHomeBackground(data);
   createCarrouselItems(data);
+  toggleModal();
+  documentController();
 }
