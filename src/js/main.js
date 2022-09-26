@@ -6,6 +6,7 @@ import { modalController } from "./modules/modalController";
 import { documentsController } from "./modules/documentsController";
 import { activeLinkController } from "./modules/activeLinkController";
 import { mobileMenuController } from "./modules/mobileMenuController";
+import { formController } from "./modules/formController";
 
 const data = [
   {
@@ -41,4 +42,5 @@ window.onload = () => {
   documentsController();
   modalController();
   mobileMenuController();
+  formController();
 }

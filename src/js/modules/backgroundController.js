@@ -7,7 +7,7 @@ export const backgroundController = (data) => {
   const imagesBackground = data.filter(i => i.richTitle.length > 0);
 
   const setData = (i) => {
-    homeContainer.style.background = `url(/assets/images/img_${imagesBackground[i].id}.jpg) no-repeat center`;
+    homeContainer.style.backgroundImage = `url(/assets/images/img_${imagesBackground[i].id}.jpg)`;
     homeContainerInfo.innerHTML = imagesBackground[i].richTitle;
   }
 
