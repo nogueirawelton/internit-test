@@ -15,6 +15,7 @@
   --back: #000000;
 
   --yellow-50: #FDEFD8;
+  --yellow-200: #FFDA8E;
   --yellow-500: #FFB41D;
 }
 
@@ -162,3 +163,4 @@ section {
 @import './modules/home.scss';
 @import './modules/enterprise.scss';
 @import './modules/building-documents.scss';
+@import './modules/localization.scss';
