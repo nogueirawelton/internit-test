@@ -1,4 +1,3 @@
-
 export const documentsController = () => {
   const controls = document.querySelectorAll(".info .document-controls button");
   const buildingDocument = document.querySelector(".document");

@@ -27,7 +27,7 @@
 
     @media (max-width: 960px) {
       border-radius: 0;
-    }
+    }    
 
     &::before {
       content: "";
@@ -61,7 +61,7 @@
       }
 
       @media (max-width: 500px) {
-        padding: 0 1rem 1rem;
+        padding: 5rem 1rem;
       }
 
       h3 {

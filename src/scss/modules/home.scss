@@ -16,6 +16,11 @@
       display: block;
     }
 
+    @media(max-width: 500px) {
+      top: 1rem;
+      left: 1rem;
+    }
+
     img {
       width: 100%;
     }
@@ -68,7 +73,7 @@
       }
 
       @media(max-width: 500px) {
-        padding: 1rem;
+        padding: 5rem 1rem;
       }
 
       h1 {
