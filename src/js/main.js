@@ -36,11 +36,11 @@ const data = [
 ]
 
 window.onload = () => {
+  mobileMenuController();
   activeLinkController();
   backgroundController(data);
   carouselController(data);
   documentsController();
   modalController();
-  mobileMenuController();
   formController();
 }

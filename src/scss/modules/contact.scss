@@ -1,11 +1,20 @@
 #contact {
   margin-top: 1rem;
+  position: relative;
 
   @media (max-width: 500px) {
     height: 720px;
   }
 
-  >img {
+  .diamonds {
+    top: -40px;
+
+    @media (max-width: 1820px) {
+      display: none;
+    }
+  }
+
+  > div + img {
     width: 140px;
     height: 70px;
     position: absolute;
@@ -16,6 +25,7 @@
       display: none;
     }
   }
+
   .container {
     background-size: cover;
     border-radius: 100px 0 600px 0;

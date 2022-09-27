@@ -1,5 +1,16 @@
 #building-documents {
   margin-top: 1rem;
+  position: relative;
+
+  .diamonds {
+    right: -140px;
+    bottom: -480px;
+    transform: rotate(180deg);
+
+    @media (max-width: 1450px) {
+      display: none;
+    }
+  }
 
   @media(max-width: 1450px) {
     flex-direction: column;

@@ -1,6 +1,17 @@
 #home {
   position: relative;
+  overflow: hidden;
   
+  .diamonds {
+    right: -235px;
+    bottom: -70px;
+    transform: rotate(180deg) scale(1.1);
+
+    @media (max-width: 1450px) {
+      display: none;
+    }
+  }
+
   @media (max-width: 500px) {
     height: 720px;
   }
