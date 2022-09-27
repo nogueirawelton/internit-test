@@ -1,6 +1,10 @@
 #contact {
   margin-top: 1rem;
 
+  @media (max-width: 500px) {
+    height: 720px;
+  }
+
   >img {
     width: 140px;
     height: 70px;
@@ -27,7 +31,7 @@
 
     @media (max-width: 960px) {
       border-radius: 0;
-    }    
+    }
 
     &::before {
       content: "";
@@ -54,14 +58,14 @@
       color: var(--white);
       max-width: 500px;
       margin: 8rem 15rem 0 auto;
-      padding: 0 2rem 2rem;
+      padding-inline: 2rem;
 
       @media (max-width: 1450px) {
         margin: 0;
       }
 
       @media (max-width: 500px) {
-        padding: 5rem 1rem;
+        padding-inline: 1rem;
       }
 
       h3 {

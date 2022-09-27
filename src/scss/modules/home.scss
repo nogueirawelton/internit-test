@@ -1,5 +1,9 @@
 #home {
   position: relative;
+  
+  @media (max-width: 500px) {
+    height: 720px;
+  }
 
   [data-open-menu] {
     display: none;
@@ -42,6 +46,10 @@
       border-radius: 0;
     }
 
+    @media(max-width: 500px) {
+      height: 100%;
+    }
+
     &::before {
       content: "";
       border-radius: 100px 0 600px 0;
@@ -73,7 +81,7 @@
       }
 
       @media(max-width: 500px) {
-        padding: 5rem 1rem;
+        padding-inline: 1rem;
       }
 
       h1 {
